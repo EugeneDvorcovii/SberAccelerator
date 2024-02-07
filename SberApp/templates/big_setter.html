@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form action="/set_data" method="post" class="form-contact">
+          <div>
+            <h2>Добавление площадки</h2>
+            <p>Тип площадки</p>
+            <input type="radio" id="contactChoice1" name="type_app" value="email" />
+            <label for="contactChoice1">Приложение</label>
+
+            <input type="radio" id="contactChoice2" name="type_app" value="phone" />
+            <label for="contactChoice2">Сайт</label>
+
+            <input type="radio" id="contactChoice3" name="type_app" value="mail" />
+            <label for="contactChoice3">Информационная система</label>
+          </div>
+          <p><input placeholder="Название площадки*" type="text" name="username" value="" required />
+          <p><input placeholder="URL площадки или приложения в сторе*" type="text" name="email" value="" required />
+          <p><input placeholder="Внешний идентификатор" type="text" name="username" value="" required />
+          <p><input placeholder="Комментарий" type="text" name="email" value="" required />
+
+          <div>
+            <h2>Добавление контрагента</h2>
+            <h4>Общая информация</h4>
+            <p>Данные вашего поставщика, доступно только частичное редактирование</p>
+            <div>
+              <h5>Страна регистрации</h5>
+              <input type="radio" id="contactChoice1" name="country" value="email" />
+              <label for="contactChoice1">Россия</label>
+
+              <input type="radio" id="contactChoice2" name="country" value="phone" />
+              <label for="contactChoice2">Другая страна</label>
+            </div>
+            <div>
+              <h5>Правовый статус</h5>
+              <input type="radio" id="contactChoice1" name="right_status" value="email" />
+              <label for="contactChoice1">Юридическое лицо</label>
+
+              <input type="radio" id="contactChoice2" name="right_status" value="phone" />
+              <label for="contactChoice2">Физическое лицо</label>
+            </div>
+            <p><input placeholder="Название компании*" type="text" name="username" value="" required />
+            <p><input placeholder="ИНН*" type="text" name="username" value="" required />
+          </div>
+
+          <div>
+            <h2>Добавление договора</h2>
+            <div>
+              <h5>Тип договора</h5>
+              <input type="radio" id="contactChoice1" name="docs_type" value="email" />
+              <label for="contactChoice1">Договор оказания услуг</label>
+
+              <input type="radio" id="contactChoice2" name="docs_type" value="phone" />
+              <label for="contactChoice2">Посреднический договор</label>
+            </div>
+            <p><input placeholder="Номер договора*" type="text" name="username" value="" required />
+            <p><input placeholder="Исполнитель*" type="text" name="username" value="" required />
+            <p><input placeholder="Дата договора*" type="text" name="username" value="" required />
+            <p><input placeholder="Заказчик*" type="text" name="username" value="" required />
+            <p><input placeholder="Сведения о предмете договора*" type="text" name="username" value="" required />
+            <p><input placeholder="Сумма договора*" type="text" name="username" value="" required />
+
+          <p><input type="submit" value="Send" />
+        </form>
+      </div>
+   </div>
+  </div>
+</section>
+
+{% endblock %}
